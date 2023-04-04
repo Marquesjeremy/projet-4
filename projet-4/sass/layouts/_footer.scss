@@ -4,7 +4,7 @@
     .container {
         display: flex;
         flex-direction: column;
-        padding: $appPadding;
+        padding: $Padding;
     }
 
     &-logo {
@@ -12,7 +12,7 @@
         font-family: "Shrikhand", "cursive";
         margin: 0;
         font-size: 18px;
-        margin-bottom: $appPadding;
+        margin-bottom: $Padding;
     }
 
     &-list {
