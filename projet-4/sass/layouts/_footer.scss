@@ -45,4 +45,22 @@
     &-icon {
         margin-right: 10px;
     }
+
+    @media (min-width: 992px) {
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        &-list {
+            display: flex;
+            align-items: baseline;
+            gap: 30px;
+        }
+
+        &-logo {
+            margin: 5px 0 0 90px;
+        }
+    }
+
 }
