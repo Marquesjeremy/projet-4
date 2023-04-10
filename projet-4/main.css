@@ -262,7 +262,7 @@ body, html {
   text-decoration: none;
   color: inherit;
   display: block;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   transition: 0.2s;
 }
 @media (min-width: 992px) {
@@ -284,14 +284,14 @@ body, html {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card-badge {
+.card-new {
   background-color: #99E2D0;
-  color: #1b6150;
-  padding: 0.5rem;
-  border-radius: 0.125rem;
+  color: #008766;
+  padding: 7px 10px 7px 10px;
+  border-radius: 2px;
   position: absolute;
-  top: 1rem;
-  right: 0.75rem;
+  top: 15px;
+  right: 15px;
 }
 .card-footer {
   padding: 15px;
@@ -470,7 +470,7 @@ body, html {
 
 .all-menu {
   max-width: 100%;
-  padding: 5px 5% 5px 5%;
+  padding: 5px 3% 5px 3%;
 }
 .all-menu-title {
   text-transform: uppercase;
@@ -506,12 +506,14 @@ body, html {
   flex: 1;
 }
 .menu-item-title {
+  font-size: 18px;
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 .menu-item-description {
+  font-size: 15px;
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
