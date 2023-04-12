@@ -1,0 +1,63 @@
+.loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.90);
+    animation: loader;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    z-index: 10;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    &-item {
+        height: 20px;
+        width: 20px;
+        border-radius: 10px;
+        animation: jump 0.5s;
+        animation-iteration-count: 3;
+
+        &Container {
+            display: flex;
+            width: 100px;
+            justify-content: space-between;
+        }
+
+        &-1 {
+            background-color: $color-primary;
+        }
+        
+        &-2 {
+            background-color: $color-primary;
+            animation-delay: 0.1s;
+        }
+        
+        &-3 {
+            background-color: $color-primary;
+            animation-delay: 0.2s;
+        }
+    }
+}
+
+@keyframes loader {
+    100% {
+    opacity: 0;
+    z-index: -10;
+    }
+} 
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(15px);
+    }
+    75% {
+    transform: translateY(-1px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
