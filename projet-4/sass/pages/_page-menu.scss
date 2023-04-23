@@ -1,0 +1,208 @@
+.img-resto {
+    max-width: 100%;
+    max-height: 275px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.all-menu {
+    animation-name: all-menu;
+    animation-duration: 1s;
+}
+
+.menu {
+    margin-top: -70px;
+    border-radius: 40px 40px 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+
+    &-header {
+        padding: 15px 30px 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-title {
+        font-family: "Shrikhand", "cursive";
+    }
+
+    &-btn {
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        border: transparent 0px solid;
+        padding: 0;
+        display:flex;
+        align-items:center;
+        cursor: pointer;
+        position: relative;
+        background-color: black;
+        
+        &:hover::before {
+            opacity: 1;
+        }
+        
+        &::before {
+        opacity: 0;
+        transition: 0.5s;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        }
+    }
+    
+    &-like {
+        font-size: 22px;
+        transition-duration: .25s;
+        background-color: #f6f6f6;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        mix-blend-mode: lighten;
+    }
+    
+    &-btn:hover {
+        .menu-like {
+            &-nofull {
+            opacity: 0;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        margin: -70px 15% 0 15%;
+
+            &-header {
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+}
+
+.all-menus {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 992px) {
+        margin: -10px 15% 0 15%;
+        }
+}
+
+.all-menu {
+    max-width: 100%;
+    padding: 5px 3% 5px 3%;
+
+&-title {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: normal;
+
+    &::after {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: $color-tertiary;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        }
+    }
+}
+
+.menu-item {
+    background-color: white;
+    padding: 15px;
+    display: flex;
+    border-radius: 15px;
+    margin: 12px 0;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+
+    &-header {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    &-title {
+        font-size: 18px;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &-description {
+        font-size: 15px;
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &-price {
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 0.5rem;
+    }
+
+    &-valid {
+        background-color: $color-tertiary;
+        margin: -16px -75px -16px 16px;
+        width: 60px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition-duration: 0.5s;
+    }
+
+    &:hover &-valid {
+        margin-right: -16px;
+    }
+
+    &-icon-scroll {
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        transition-duration: 0.5s;
+
+    }
+
+    &:hover &-wrapIcon {
+        transform: rotate(0);
+    }
+
+    &-icon {
+        color: $color-tertiary;
+    }
+}
+
+.btn-pages-menu {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+}
+
+.btn-flat {
+    @include button;
+    padding: 15px 45px 15px 45px;
+}

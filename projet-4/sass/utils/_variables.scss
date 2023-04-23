@@ -1,0 +1,17 @@
+body, html {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$Padding: 5%;
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  position: relative;
+  padding: 0;
+}
