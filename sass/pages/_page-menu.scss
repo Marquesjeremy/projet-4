@@ -5,7 +5,19 @@
     object-fit: cover;
 }
 
+.entree, .plats, .dessert {
+    animation-name: menu;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
 
+.plats {
+    animation-delay: 0.2s;
+}
+
+.dessert {
+    animation-delay: 0.4s;
+}
 
 .menu {
     margin-top: -70px;

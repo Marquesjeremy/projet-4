@@ -48,26 +48,6 @@ body, html {
   animation-delay: 0.2s;
 }
 
-@keyframes loader {
-  100% {
-    opacity: 0;
-    z-index: -10;
-  }
-}
-@keyframes jump {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(15px);
-  }
-  75% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 .header {
   padding: 14px 0 5px 0;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -231,6 +211,9 @@ body, html {
   text-decoration: none;
   color: black;
 }
+.function-step:hover i {
+  color: #9356DC;
+}
 @media (min-width: 992px) {
   .function-step {
     flex: 1;
@@ -319,8 +302,7 @@ body, html {
   width: 100%;
   border: transparent solid 0px;
   border-radius: 15px 15px 0 0;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card-new {
   background-color: #99E2D0;
@@ -389,8 +371,21 @@ body, html {
   max-width: 100%;
   max-height: 275px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
+}
+
+.entree, .plats, .dessert {
+  animation-name: menu;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.plats {
+  animation-delay: 0.2s;
+}
+
+.dessert {
+  animation-delay: 0.4s;
 }
 
 .menu {
@@ -583,4 +578,44 @@ body, html {
 .btn-flat a {
   text-decoration: none;
   color: inherit;
+}
+
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(15px);
+  }
+  75% {
+    transform: translateY(-1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes menu {
+  0% {
+    opacity: 0;
+    transform: translateX(30%);
+  }
+  50% {
+    transform: translateX(0%);
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=main.css.map */
